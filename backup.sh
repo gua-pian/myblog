@@ -2,6 +2,11 @@
 # 进入博客目录
 cd ~/myblog
 
+hugo
+rm -rf /var/www/blog/*
+cp -r public/* /var/www/blog/
+echo "发布成功！"
+
 # 确保关联了远程仓库（仅需第一次执行，或者你手动执行一次）
 git remote add origin git@github.com:你gua-pian/myblog.git
 
