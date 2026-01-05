@@ -1,0 +1,8 @@
+baseURL = 'https://donghao.lain.ch/'
+languageCode = 'zh-cn'
+title = 'donghao 的技术空间'
+theme = 'PaperMod'
+
+[params]
+    defaultTheme = "auto" # 自动跟随系统明暗模式
+    showCodeCopyButtons = true
