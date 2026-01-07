@@ -6,3 +6,10 @@ theme = 'PaperMod'
 [params]
     defaultTheme = "auto" # 自动跟随系统明暗模式
     showCodeCopyButtons = true
+    comments = true
+[[params.socialIcons]]
+    name = "twitter"
+    url = "https://x.com/HaoFait"
+[[params.socialIcons]]
+    name = "email"
+    url = "mailto:hao.a.dong@gmail.com"
