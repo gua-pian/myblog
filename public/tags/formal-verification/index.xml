@@ -1,28 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Posts on donghao 的技术空间</title>
-    <link>https://donghao.lain.ch/posts/</link>
-    <description>Recent content in Posts on donghao 的技术空间</description>
+    <title>Formal Verification on donghao 的技术空间</title>
+    <link>https://donghao.lain.ch/tags/formal-verification/</link>
+    <description>Recent content in Formal Verification on donghao 的技术空间</description>
     <generator>Hugo -- 0.146.0</generator>
     <language>zh-cn</language>
     <lastBuildDate>Wed, 07 Jan 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://donghao.lain.ch/posts/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://donghao.lain.ch/tags/formal-verification/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>深度剖析 eBPF：从内核动态编程到 Verifier 形式化验证的底层逻辑</title>
       <link>https://donghao.lain.ch/posts/ebpf-1/</link>
       <pubDate>Wed, 07 Jan 2026 00:00:00 +0000</pubDate>
       <guid>https://donghao.lain.ch/posts/ebpf-1/</guid>
       <description>eBPF 是如何改变 Linux 内核开发的？本文深入探讨 eBPF 的架构本质，对比其与内核模块的区别，并详述 Verifier 验证器如何利用形式化验证思想保障系统安全。</description>
-    </item>
-    <item>
-      <title>我的第一篇技术随笔</title>
-      <link>https://donghao.lain.ch/posts/my-first-post/</link>
-      <pubDate>Mon, 05 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>https://donghao.lain.ch/posts/my-first-post/</guid>
-      <description>&lt;h2 id=&#34;思考的起点&#34;&gt;思考的起点&lt;/h2&gt;
-&lt;p&gt;这是我在自己的 VPS 上通过 &lt;strong&gt;Xray + Nginx + Hugo&lt;/strong&gt; 搭建的第一个站点。
-在这里，我将分享关于架构、网络以及技术的深度思考。&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

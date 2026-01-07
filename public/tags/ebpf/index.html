@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto" data-theme="auto">
 
-<head>
-	<meta name="generator" content="Hugo 0.146.0"><meta charset="utf-8">
+<head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
-<title>donghao 的技术空间</title>
-
+<title>EBPF | donghao 的技术空间</title>
+<meta name="keywords" content="">
 <meta name="description" content="">
 <meta name="author" content="">
-<link rel="canonical" href="https://donghao.lain.ch/">
+<link rel="canonical" href="https://donghao.lain.ch/tags/ebpf/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.343cc480b9ffc8f04ccbe5e968ad674880cab773ec19905e93033065c1e7a804.css" integrity="sha256-NDzEgLn/yPBMy&#43;XpaK1nSIDKt3PsGZBekwMwZcHnqAQ=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://donghao.lain.ch/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://donghao.lain.ch/favicon-16x16.png">
@@ -19,8 +18,8 @@
 <link rel="mask-icon" href="https://donghao.lain.ch/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" type="application/rss+xml" href="https://donghao.lain.ch/index.xml" title="rss">
-<link rel="alternate" hreflang="en" href="https://donghao.lain.ch/">
+<link rel="alternate" type="application/rss+xml" href="https://donghao.lain.ch/tags/ebpf/index.xml" title="rss">
+<link rel="alternate" hreflang="en" href="https://donghao.lain.ch/tags/ebpf/">
 <noscript>
     <style>
         #theme-toggle,
@@ -72,28 +71,15 @@
         document.querySelector("html").dataset.theme = 'light';
     }
 
-</script><meta property="og:url" content="https://donghao.lain.ch/">
+</script><meta property="og:url" content="https://donghao.lain.ch/tags/ebpf/">
   <meta property="og:site_name" content="donghao 的技术空间">
-  <meta property="og:title" content="donghao 的技术空间">
+  <meta property="og:title" content="EBPF">
   <meta property="og:locale" content="zh-cn">
   <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="donghao 的技术空间">
+<meta name="twitter:title" content="EBPF">
 <meta name="twitter:description" content="">
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "donghao 的技术空间",
-  "url": "https://donghao.lain.ch/",
-  "description": "",
-  "logo": "https://donghao.lain.ch/favicon.ico",
-  "sameAs": [
-      "https://x.com/HaoFait", "https://bsky.app/profile/donghao1.bsky.social", "mailto:hao.a.dong@gmail.com"
-  ]
-}
-</script>
 </head>
 <body class="list" id="top">
     <header class="header">
@@ -128,45 +114,13 @@
     </nav>
 </header>
 <main class="main"> 
-<article class="first-entry home-info">
-    <header class="entry-header">
-        <h1></h1>
-    </header>
-    <div class="entry-content">
-        💡 专注于网络协议与架构设计。在这里，我记录探索技术的每一步。
-    </div>
-    <footer class="entry-footer">
-        <div class="social-icons" >
-    <a href="https://x.com/HaoFait" target="_blank" rel="noopener noreferrer me"
-        title="Twitter">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-    stroke-linecap="round" stroke-linejoin="round">
-    <path
-        d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
-    </path>
-</svg>
-    </a>
-    <a href="https://bsky.app/profile/donghao1.bsky.social" target="_blank" rel="noopener noreferrer me"
-        title="Bluesky">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="-25 0 400 320" fill="none" stroke="currentColor" stroke-width="30">
-    <path
-        d="M180 141.964C163.699 110.262 119.308 51.1817 78.0347 22.044C38.4971 -5.86834 23.414 -1.03207 13.526 3.43594C2.08093 8.60755 0 26.1785 0 36.5164C0 46.8542 5.66748 121.272 9.36416 133.694C21.5786 174.738 65.0603 188.607 105.104 184.156C107.151 183.852 109.227 183.572 111.329 183.312C109.267 183.642 107.19 183.924 105.104 184.156C46.4204 192.847 -5.69621 214.233 62.6582 290.33C137.848 368.18 165.705 273.637 180 225.702C194.295 273.637 210.76 364.771 295.995 290.33C360 225.702 313.58 192.85 254.896 184.158C252.81 183.926 250.733 183.645 248.671 183.315C250.773 183.574 252.849 183.855 254.896 184.158C294.94 188.61 338.421 174.74 350.636 133.697C354.333 121.275 360 46.8568 360 36.519C360 26.1811 357.919 8.61012 346.474 3.43851C336.586 -1.02949 321.503 -5.86576 281.965 22.0466C240.692 51.1843 196.301 110.262 180 141.964Z" />
-</svg>
-    </a>
-    <a href="mailto:hao.a.dong@gmail.com" target="_blank" rel="noopener noreferrer me"
-        title="Email">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 21" fill="none" stroke="currentColor" stroke-width="2"
-    stroke-linecap="round" stroke-linejoin="round">
-    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-    <polyline points="22,6 12,13 2,6"></polyline>
-</svg>
-    </a>
-</div>
+<header class="page-header">
+  <h1>
+    EBPF
+  </h1>
+</header>
 
-    </footer>
-</article>
-
-<article class="post-entry"> 
+<article class="post-entry tag-entry"> 
   <header class="entry-header">
     <h2 class="entry-hint-parent">深度剖析 eBPF：从内核动态编程到 Verifier 形式化验证的底层逻辑
     </h2>
@@ -184,19 +138,6 @@ User Space：负责控制逻辑、加载程序、数据聚合（通过 Map）。
   </div>
   <footer class="entry-footer"><span title='2026-01-07 00:00:00 +0000 UTC'>January 7, 2026</span>&nbsp;·&nbsp;<span>donghao</span></footer>
   <a class="entry-link" aria-label="post link to 深度剖析 eBPF：从内核动态编程到 Verifier 形式化验证的底层逻辑" href="https://donghao.lain.ch/posts/ebpf-1/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">我的第一篇技术随笔
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>思考的起点 这是我在自己的 VPS 上通过 Xray &#43; Nginx &#43; Hugo 搭建的第一个站点。 在这里，我将分享关于架构、网络以及技术的深度思考。
-</p>
-  </div>
-  <footer class="entry-footer"><span title='2026-01-05 00:00:00 +0000 UTC'>January 5, 2026</span></footer>
-  <a class="entry-link" aria-label="post link to 我的第一篇技术随笔" href="https://donghao.lain.ch/posts/my-first-post/"></a>
 </article>
     </main>
     

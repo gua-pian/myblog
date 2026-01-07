@@ -6,6 +6,42 @@
     <description>Recent content in Tags on donghao 的技术空间</description>
     <generator>Hugo -- 0.146.0</generator>
     <language>zh-cn</language>
+    <lastBuildDate>Wed, 07 Jan 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://donghao.lain.ch/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>EBPF</title>
+      <link>https://donghao.lain.ch/tags/ebpf/</link>
+      <pubDate>Wed, 07 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>https://donghao.lain.ch/tags/ebpf/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Formal Verification</title>
+      <link>https://donghao.lain.ch/tags/formal-verification/</link>
+      <pubDate>Wed, 07 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>https://donghao.lain.ch/tags/formal-verification/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Linux Kernel</title>
+      <link>https://donghao.lain.ch/tags/linux-kernel/</link>
+      <pubDate>Wed, 07 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>https://donghao.lain.ch/tags/linux-kernel/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Observability</title>
+      <link>https://donghao.lain.ch/tags/observability/</link>
+      <pubDate>Wed, 07 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>https://donghao.lain.ch/tags/observability/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Security</title>
+      <link>https://donghao.lain.ch/tags/security/</link>
+      <pubDate>Wed, 07 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>https://donghao.lain.ch/tags/security/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>

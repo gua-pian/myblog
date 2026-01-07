@@ -137,6 +137,26 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">深度剖析 eBPF：从内核动态编程到 Verifier 形式化验证的底层逻辑
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> 导读：排查生产环境的“幽灵 Bug”，你还在靠硬埋点打印日志吗？本文将带你跳出应用层，深入内核，探索终极观测方案——eBPF。
+引言：观测技术的演进——从代码入侵到内核无感 排查复杂业务逻辑时，我们解决问题的思路经历了一个逐步向下的过程：
+原始期：代码内硬编码 log.info。 中间件期：利用 TraceID 在上下文（Context）中存储链路数据。 边车期 (Sidecar)：通过 Service Mesh 拦截流量，实现零侵入观测。 终极方案：eBPF。 从应用层、中间件、基础服务层到内核层，观测粒度越来越细。未来的突破点是否在硬件层（如 SmartNIC/FPGA）？这值得我们期待。
+一、 eBPF 的多重面相：它到底是什么？ 初学者常被术语迷惑，理解 eBPF 需要由表及里地看它：
+1. 通用的编程框架 (ISA) eBPF 是一套指令集、寄存器定义和调用规范（类似于 JVM 之于 Java）。它让内核拥有了运行虚拟指令的能力。
+2. 动态内核编程框架 它允许你在不重启内核、不修改源码的前提下，将代码挂载到内核的 Hook 点（kprobes, tracepoints, XDP 等）。这是对 Linux 传统开发范式的革命。
+3. “内核-用户”协同系统 eBPF 不孤立存在，它是一个完整的闭环：
+User Space：负责控制逻辑、加载程序、数据聚合（通过 Map）。 Kernel Space：在高性能路径上执行过滤、监控或重定向。 4. 关键对比：为什么不直接写内核模块 (LKM)？ 特性 Linux 内核模块 (LKM) eBPF 程序 安全性 高风险。Bug 易触发 Kernel Panic。 极安全。由 Verifier 强制静态分析。 开发难度 极高。需精通内核源码与锁机制。 中等。支持 C/Go/Rust，关注业务逻辑。 可移植性 较差。需针对特定内核版本编译。 极强。支持 CO-RE (一次编译，到处运行)。 运行权限 完全权限。可读写任意内存。 受限沙箱。仅能通过 Helper Functions 访问。 运维友好 不稳定。卸载不当可能残留僵尸状态。 原子化。加载/卸载无副作用，无需重启。 二、 Verifier：内核的“金牌安检员” eBPF 允许在内核跑代码，但如何防止开发者写出 while(1) 拖垮 CPU，或者野指针搞崩系统？
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-01-07 00:00:00 +0000 UTC'>January 7, 2026</span>&nbsp;·&nbsp;<span>donghao</span></footer>
+  <a class="entry-link" aria-label="post link to 深度剖析 eBPF：从内核动态编程到 Verifier 形式化验证的底层逻辑" href="https://donghao.lain.ch/posts/ebpf-1/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">我的第一篇技术随笔
     </h2>
   </header>
