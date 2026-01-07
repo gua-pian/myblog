@@ -11,7 +11,7 @@ theme = 'PaperMod'
 
     # 主页欢迎语配置
     [params.homeInfoParams]
-        Title = "donghao 的技术空间"
+        Title = ""
         Content = "💡 专注于网络协议与架构设计。在这里，我记录探索技术的每一步。"
 
 # 社交图标配置（必须紧跟在 params 之后或作为其子项）
