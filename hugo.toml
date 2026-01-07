@@ -20,5 +20,9 @@ theme = 'PaperMod'
     url = "https://x.com/HaoFait"
 
 [[params.socialIcons]]
+    name = "bluesky"
+    url = "https://bsky.app/profile/donghao1.bsky.social"
+
+[[params.socialIcons]]
     name = "email"
     url = "mailto:hao.a.dong@gmail.com"
