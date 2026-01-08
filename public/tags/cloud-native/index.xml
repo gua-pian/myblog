@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Linux Kernel on donghao 的技术空间</title>
-    <link>https://donghao.lain.ch/tags/linux-kernel/</link>
-    <description>Recent content in Linux Kernel on donghao 的技术空间</description>
+    <title>Cloud Native on donghao 的技术空间</title>
+    <link>https://donghao.lain.ch/tags/cloud-native/</link>
+    <description>Recent content in Cloud Native on donghao 的技术空间</description>
     <generator>Hugo -- 0.146.0</generator>
     <language>zh-cn</language>
     <lastBuildDate>Wed, 07 Jan 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://donghao.lain.ch/tags/linux-kernel/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://donghao.lain.ch/tags/cloud-native/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>深度剖析 eBPF：为什么 Linux 内核需要一场“热插拔”革命？</title>
       <link>https://donghao.lain.ch/posts/ebpf-1/</link>

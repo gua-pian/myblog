@@ -168,22 +168,20 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2 class="entry-hint-parent">深度剖析 eBPF：从内核动态编程到 Verifier 形式化验证的底层逻辑
+    <h2 class="entry-hint-parent">深度剖析 eBPF：为什么 Linux 内核需要一场“热插拔”革命？
     </h2>
   </header>
   <div class="entry-content">
-    <p> 导读：排查生产环境的“幽灵 Bug”，你还在靠硬埋点打印日志吗？本文将带你跳出应用层，深入内核，探索终极观测方案——eBPF。
-引言：观测技术的演进——从代码入侵到内核无感 排查复杂业务逻辑时，我们解决问题的思路经历了一个逐步向下的过程：
-原始期：代码内硬编码 log.info。 中间件期：利用 TraceID 在上下文（Context）中存储链路数据。 边车期 (Sidecar)：通过 Service Mesh 拦截流量，实现零侵入观测。 终极方案：eBPF。 从应用层、中间件、基础服务层到内核层，观测粒度越来越细。未来的突破点是否在硬件层（如 SmartNIC/FPGA）？这值得我们期待。
-一、 eBPF 的多重面相：它到底是什么？ 初学者常被术语迷惑，理解 eBPF 需要由表及里地看它：
-1. 通用的编程框架 (ISA) eBPF 是一套指令集、寄存器定义和调用规范（类似于 JVM 之于 Java）。它让内核拥有了运行虚拟指令的能力。
-2. 动态内核编程框架 它允许你在不重启内核、不修改源码的前提下，将代码挂载到内核的 Hook 点（kprobes, tracepoints, XDP 等）。这是对 Linux 传统开发范式的革命。
-3. “内核-用户”协同系统 eBPF 不孤立存在，它是一个完整的闭环：
-User Space：负责控制逻辑、加载程序、数据聚合（通过 Map）。 Kernel Space：在高性能路径上执行过滤、监控或重定向。 4. 关键对比：为什么不直接写内核模块 (LKM)？ 特性 Linux 内核模块 (LKM) eBPF 程序 安全性 高风险。Bug 易触发 Kernel Panic。 极安全。由 Verifier 强制静态分析。 开发难度 极高。需精通内核源码与锁机制。 中等。支持 C/Go/Rust，关注业务逻辑。 可移植性 较差。需针对特定内核版本编译。 极强。支持 CO-RE (一次编译，到处运行)。 运行权限 完全权限。可读写任意内存。 受限沙箱。仅能通过 Helper Functions 访问。 运维友好 不稳定。卸载不当可能残留僵尸状态。 原子化。加载/卸载无副作用，无需重启。 二、 Verifier：内核的“金牌安检员” eBPF 允许在内核跑代码，但如何防止开发者写出 while(1) 拖垮 CPU，或者野指针搞崩系统？
+    <p>引言：观测技术的终局——从代码入侵到内核无感 排查复杂分布式系统中的“幽灵 Bug”时，我们的排查思路经历了一个逐步向下的进化过程：
+原始期：在业务代码里硬编码 log.info，这种方式不仅脏，而且需要不断重启服务。 中间件期：利用 TraceID 在 SDK 层面存储链路数据，但它对非 Java/Go 的原生应用（如 C&#43;&#43;）支持极差。 边车期 (Sidecar)：通过 Service Mesh 拦截流量。虽然实现了无侵入，但由于流量要在 User Space 和 Kernel Space 之间反复“跳跃”，带来了显著的 CPU 和延迟开销。 终极方案：eBPF。它直接驻留在内核态，在数据产生的源头进行捕获。 从应用层、中间件、基础服务层到内核层，观测粒度越来越细。未来，我们甚至期待在 SmartNIC（智能网卡）等硬件层看到更底层的 eBPF 卸载方案。
+一、 为什么 eBPF 会突然爆火？ eBPF（Extended Berkeley Packet Filter）不仅仅是一个技术工具，它改变了内核创新的速度。
+1. 它是内核创新的“加速器” 在没有 eBPF 之前，如果你想给 Linux 内核加一个功能（比如一种新的限流算法）：
+传统方式：编写内核代码 -&gt; 提交邮件列表讨论（数月）-&gt; 等待合并入主线（数月）-&gt; 等待发行版更新（数年）。 eBPF 方式：编写 eBPF 程序 -&gt; 加载进内核 -&gt; 即刻生效。 这种“内核热插拔”的能力，让内核开发者从数年的迭代周期，缩短到了几秒钟。 2. 它是高性能系统的“加速引擎” 传统的网络监测或防火墙（如 iptables）需要频繁地在**用户态（User Space）和内核态（Kernel Space）**之间切换，这种上下文切换的开销在万兆网络下是巨大的。eBPF 直接在内核中处理数据，避免了昂贵的内存拷贝。
+扩展性对比：iptables vs. eBPF 注：iptables 性能随规则增加线性下降，eBPF 保持常数级延迟。
 ...</p>
   </div>
   <footer class="entry-footer"><span title='2026-01-07 00:00:00 +0000 UTC'>January 7, 2026</span>&nbsp;·&nbsp;<span>donghao</span></footer>
-  <a class="entry-link" aria-label="post link to 深度剖析 eBPF：从内核动态编程到 Verifier 形式化验证的底层逻辑" href="https://donghao.lain.ch/posts/ebpf-1/"></a>
+  <a class="entry-link" aria-label="post link to 深度剖析 eBPF：为什么 Linux 内核需要一场“热插拔”革命？" href="https://donghao.lain.ch/posts/ebpf-1/"></a>
 </article>
 
 <article class="post-entry"> 
