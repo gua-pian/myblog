@@ -211,3 +211,12 @@ To github.com:gua-pian/myblog.git
 /root/myblog/backup.sh: line 5: hugo: command not found
 发布成功！
 fatal: remote origin already exists.
+[main d30a70d] Auto backup: 2026-02-01 03:00:02
+ 1 file changed, 9 insertions(+)
+Warning: Permanently added the ECDSA host key for IP address '140.82.112.4' to the list of known hosts.
+To github.com:gua-pian/myblog.git
+   45ffae6..d30a70d  main -> main
+备份完成于 Sun Feb  1 03:00:03 GMT 2026
+/root/myblog/backup.sh: line 5: hugo: command not found
+发布成功！
+fatal: remote origin already exists.
