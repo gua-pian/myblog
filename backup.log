@@ -600,3 +600,11 @@ To github.com:gua-pian/myblog.git
 /root/myblog/backup.sh: line 5: hugo: command not found
 发布成功！
 fatal: remote origin already exists.
+[main b0c61b3] Auto backup: 2026-03-21 03:00:01
+ 1 file changed, 8 insertions(+)
+To github.com:gua-pian/myblog.git
+   922a207..b0c61b3  main -> main
+备份完成于 Sat Mar 21 03:00:03 GMT 2026
+/root/myblog/backup.sh: line 5: hugo: command not found
+发布成功！
+fatal: remote origin already exists.
